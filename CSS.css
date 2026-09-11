@@ -1,0 +1,136 @@
+/* body {
+    display: block;
+    padding: 0px;
+    margin: 0px;
+} */
+
+/* .todo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 10px;
+}
+
+.todo1 {
+    padding: 10px;
+    margin: 10px;
+    border: 4px solid;
+    cursor: pointer;
+}
+.todo1:hover {
+    background-color: lightblue;
+}
+.todo1.completed {
+    background-color: darkcyan;
+} */
+
+/* form#registration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.manOrWman {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 3px solid orange;
+    border-radius: 6px;
+}
+
+.manWoman {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.man {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 10px 0px 10px;
+}
+
+.Women {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 10px 0px 10px;
+}
+
+.checkBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.registerion {
+    border: 7px solid orange;
+    padding: 10px 20px 20px 30px;
+    border-radius: 20px;
+    background: #ffa50033;
+}
+
+p {
+    font-size: 15px;
+    font-weight: normal;
+    font-family: sans-serif;
+}
+
+.passport {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.aboutMe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 15px;
+}
+
+.reg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    padding: 4px 50px 4px 50px;
+    border: 2px solid orange;
+    border-radius: 6px;
+} */
+
+/* :root {
+    --color-light: #ffffff;
+    --color-dark: #000;
+
+    --color-text: var(--color-dark);
+    --color-bg: var(--color-light);
+}
+
+html.its-dark-theme {
+    --color-text: var(--color-light);
+    --color-bg: var(--color-dark);
+}
+
+
+body {
+    padding: 1rem;
+    font-family: sans-serif;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+} */
