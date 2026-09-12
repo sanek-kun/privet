@@ -1664,3 +1664,52 @@
 // for(let key in localStorage){
 //     console.log(key)
 // }
+
+
+
+
+
+//day1
+
+// let age = 17
+// age = 18
+// console.log(age) можна изменять 
+
+// const name = "sasha"
+// name = "Nekit"
+// console.log(name) нельзя изменять 
+
+// let name = "sasha" -- String
+// let age = 17 -- Number 
+// let isStudent = true -- Boolean 
+// let x = undefined -- Undefined
+// let y = null -- Null
+
+// const user = {
+//     name : "sasha",
+//     age : 17,
+// } -- object
+
+// const names = ["sahsa" , "danila" , "artur"] -- array
+
+// console.log(typeof "hello")
+// console.log(typeof 17)
+// console.log(typeof true) -- проверка\
+
+// function sayHello (name){
+//     console.log(`hello ${name}`)
+// }
+// const name = "sahsa"
+// sayHello(name)  -- function
+
+// function sum(a , b ){
+//     return (a + b) / 2
+// }
+
+// const result = sum(5 , 3)
+// console.log(result) -- function
+
+// const sum = (a, b) => a * b
+
+// const res = sum(6,7)
+// console.log(res) -- function too
