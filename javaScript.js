@@ -1669,7 +1669,7 @@
 
 
 
-//day1
+//day 1
 
 // let age = 17
 // age = 18
@@ -1713,3 +1713,85 @@
 
 // const res = sum(6,7)
 // console.log(res) -- function too
+
+
+//day 2
+
+//object
+/**
+ * @param {object} createObjectUser объект , с подобъектом который создает юзера
+ * @param {string} name ваше имя 
+ * @param {number} age сколько вам лет
+ * @param {string} city ваш город
+* @param {string} street вашa улица
+ */
+function createObjectUser (name , age , city , street){
+    const objectname = {
+        name : name,
+        age : age,
+        address : {
+            city : city,
+            street : street,
+        },
+    }
+
+    return objectname
+}
+const user1 = createObjectUser("Sasha" , 17 , "warsaw" , "kalenska 3")
+
+console.log(user1)
+
+//array
+let names = ["sahsa" , "vitia" , "vlad"]
+console.log(names)
+console.log(names.length)
+console.log(names[0])
+console.log(names[names.length - 1])
+names.push("nika")
+console.log(names[names.length - 1])
+console.log(names.length)
+names.pop()
+console.log(names.length)
+
+//Destructuring
+const{name , age , sity , street} = user1
+let[first , second , third] = names
+
+console.log(`
+    name - ${name};
+    age - ${age};
+    sity - ${sity};
+    street - ${street}.
+`)
+console.log(`
+    first name - ${first};
+    second name - ${second};
+    third name - ${third}.
+`)
+
+//Spread "розпаковка"
+console.log(...names)
+const copyOfNamesandOneMore = [...names , "nika"]
+console.log(names)
+console.log(copyOfNamesandOneMore)
+
+// "сбор"
+
+const [firstname , ...rest] = copyOfNamesandOneMore
+console.log(first)
+console.log(rest)
+
+function sum(...numbers){
+    let result = 0;
+
+    for (let number of numbers){
+        result += number 
+    }
+
+    return result
+}
+
+console.log(sum(10,20,30,7))
+console.log(sum(10,10,10,10,10,5,5,5,2))
+
+
