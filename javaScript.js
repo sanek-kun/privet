@@ -1718,80 +1718,215 @@
 //day 2
 
 //object
-/**
- * @param {object} createObjectUser объект , с подобъектом который создает юзера
- * @param {string} name ваше имя 
- * @param {number} age сколько вам лет
- * @param {string} city ваш город
-* @param {string} street вашa улица
- */
-function createObjectUser (name , age , city , street){
-    const objectname = {
-        name : name,
-        age : age,
-        address : {
-            city : city,
-            street : street,
-        },
-    }
+// /**
+//  * @param {object} createObjectUser объект , с подобъектом который создает юзера
+//  * @param {string} name ваше имя 
+//  * @param {number} age сколько вам лет
+//  * @param {string} city ваш город
+// * @param {string} street вашa улица
+//  */
+// function createObjectUser (name , age , city , street){
+//     const objectname = {
+//         name : name,
+//         age : age,
+//         address : {
+//             city : city,
+//             street : street,
+//         },
+//     }
 
-    return objectname
-}
-const user1 = createObjectUser("Sasha" , 17 , "warsaw" , "kalenska 3")
+//     return objectname
+// }
+// const user1 = createObjectUser("Sasha" , 17 , "warsaw" , "kalenska 3")
 
-console.log(user1)
+// console.log(user1)
 
-//array
-let names = ["sahsa" , "vitia" , "vlad"]
-console.log(names)
-console.log(names.length)
-console.log(names[0])
-console.log(names[names.length - 1])
-names.push("nika")
-console.log(names[names.length - 1])
-console.log(names.length)
-names.pop()
-console.log(names.length)
+// //array
+// let names = ["sahsa" , "vitia" , "vlad"]
+// console.log(names)
+// console.log(names.length)
+// console.log(names[0])
+// console.log(names[names.length - 1])
+// names.push("nika")
+// console.log(names[names.length - 1])
+// console.log(names.length)
+// names.pop()
+// console.log(names.length)
 
-//Destructuring
-const{name , age , sity , street} = user1
-let[first , second , third] = names
+// //Destructuring
+// const{name , age , sity , street} = user1
+// let[first , second , third] = names
 
-console.log(`
-    name - ${name};
-    age - ${age};
-    sity - ${sity};
-    street - ${street}.
-`)
-console.log(`
-    first name - ${first};
-    second name - ${second};
-    third name - ${third}.
-`)
+// console.log(`
+//     name - ${name};
+//     age - ${age};
+//     sity - ${sity};
+//     street - ${street}.
+// `)
+// console.log(`
+//     first name - ${first};
+//     second name - ${second};
+//     third name - ${third}.
+// `)
 
-//Spread "розпаковка"
-console.log(...names)
-const copyOfNamesandOneMore = [...names , "nika"]
-console.log(names)
-console.log(copyOfNamesandOneMore)
+// //Spread "розпаковка"
+// console.log(...names)
+// const copyOfNamesandOneMore = [...names , "nika"]
+// console.log(names)
+// console.log(copyOfNamesandOneMore)
 
-// "сбор"
+// // "сбор"
 
-const [firstname , ...rest] = copyOfNamesandOneMore
-console.log(first)
-console.log(rest)
+// const [firstname , ...rest] = copyOfNamesandOneMore
+// console.log(first)
+// console.log(rest)
 
-function sum(...numbers){
-    let result = 0;
+// /**
+//  * @param  {number} numbers вписываем сколько угодно цифр и оно все их суммирует
+//  */
+// function sum(...numbers){
+//     let result = 0;
 
-    for (let number of numbers){
-        result += number 
-    }
+//     for (let number of numbers){
+//         result += number 
+//     }
 
-    return result
-}
+//     return result
+// }
 
-console.log(sum(10,20,30,7))
-console.log(sum(10,10,10,10,10,5,5,5,2))
+// console.log(sum(10,20,30,7))
+// console.log(sum(10,10,10,10,10,5,5,5,2))
+
+
+
+//day 3
+let numb = 0
+let numbers = [1,2,3,4,67,5,6,7,8,9,10]
+let names = ["ludrik" , "provider" , "bandera"]
+let letters = ["a" , "b" , "Z" , "c" ,"v" , "z" , 'Hi' , "V" , "A" , "B" , "C" ]
+
+
+// map
+const numbersMap = numbers.map(numbers => numbers *2)
+console.log(numbersMap)
+// берёт каждый элемент и что то с ним делает
+const namesMap = names.map(names => "Mr." + names)
+console.log(namesMap)
+
+
+// filter
+const numbersFilter = numbers.filter(number => number > 5)
+console.log(numbersFilter)
+// берёт каждый элемент и проверяет условие
+const namesFilter = names.filter(name => name.length > 6)
+console.log(namesFilter)
+
+
+// find
+const numbersFind = numbers.find(number => number > 0)
+console.log(numbersFind)
+// ищет первый подходящий элемент по заданному условию
+const namesFind = names.find(name => name.length <= 6)
+console.log(namesFind)
+
+
+// findIndex
+const numbersFindIndex = numbers.findIndex(number => number === 67)
+console.log(numbersFindIndex)
+// ищет первый подходящий элемент по заданному условию и выдает его индекс
+const namesFindIndex = names.findIndex(name => name === "ludrik")
+console.log(namesFindIndex)
+
+
+// some
+const numbersSome = numbers.some(numb => numb === 20)
+console.log(numbersSome)
+// если в списке есть хоть один элемент подходящий по данному запросу , выдает булевое значение
+const namesSome = names.some(name => name === "ludrik")
+console.log(namesSome)
+
+
+// every
+const numbersEvery = numbers.every(numb => numb <= 10 )
+console.log(numbersEvery)
+// проверяет все ли элементы в списке подходят данному условию , выдает булевое значение
+const namesEvery = names.every(name => name.length < 7)
+console.log(namesEvery)
+
+
+// include
+const numbersInclude = numbers.includes(67)
+console.log(numbersInclude)
+// проверяет есть ли вообще это что то в нашем массиве , выдает булевое значение
+const namesInclude = names.includes("Sasha")
+console.log(namesInclude)
+
+
+// indexOf
+const numbersIndexOf = numbers.indexOf(67)
+console.log(numbersIndexOf)
+// ищет именно индекс числа/слова в масиве , не путать с 
+const namesIndexOf = names.indexOf("ludrik")
+console.log(namesIndexOf)
+
+
+// reduce
+const numbersReduce = numbers.reduce((acc , numb) => {
+    return acc + numb
+}, 0)
+console.log(numbersReduce)
+// берет элемент и складывает их воедино
+
+
+// sort
+const numbersSort = [...numbers].sort()
+console.log(numbersSort)
+// не доверяйте этой падле , она сортирует только по строкам И ИЗМЕНЯЕТ ИЗНАЧАЛЬНЫЙ МАССИВ
+const lettersSort = [...letters].sort()
+console.log(lettersSort)
+
+
+// reverse
+const numbersReverse = [...numbers].reverse()
+console.log(numbersReverse)
+// переворачивает массив , просто переворачивает И ИЗМЕНЯЕТ ИЗНАЧАЛЬНЫЙ МАССИВ
+const lettersRevers = [...letters].reverse()
+console.log(lettersRevers)
+
+
+//join
+const numbersJoin = [...numbers].join(", ")
+console.log(numbersJoin)
+// делает из массива строку
+const namesJoin = [...names].join(", ")
+console.log(namesJoin)
+
+
+// slice
+const numbersSlice = [...numbers].slice(2,3)
+console.log(numbersSlice)
+// просто вырезаем какие то части от массива и оставляем массив
+const namesSlice = [...names].slice(1)
+console.log(namesSlice)
+
+
+// splice
+const numbersSplice = [...numbers].splice(2,3)
+console.log(numbersSplice)
+// изменяет массив, может удалять, добавлять или заменять элементы, возвращает удаленные элементы
+const namesSplice = [...names].splice(1,1)
+console.log(namesSplice)
+
+
+// forEach
+numbers.forEach(number =>{
+    numb += number
+})
+console.log(numb)
+// проходиться по каждому елементу и виполняет действие , не создавая отдельного масива
+namesMap.forEach(name => {
+    console.log(`Hello ${name}`)
+})
+
 
 
